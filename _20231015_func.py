@@ -81,6 +81,27 @@ def is_qwadre(s):
  x = s ** 0.5
  return x == int(x) if s >= 0 else False
 
+def deleteVowels_old(stringWithVowels : str):
+    """Удаляем все гласные буквы из строки"""
+    
+    stringNoneVowels_list = [letter for letter in stringWithVowels
+                         if letter not in ['а', 'А', 'о', 'О','у', 'У', 'ы', 'Ы', 'и','И',
+                                           'э', 'Э', 'я', 'Я', 'ю', 'Ю', 'е', 'Е', 'ё', 'Ё']
+                            ]
+    stringNoneVowels = "".join(stringNoneVowels_list)
+    return stringNoneVowels
+
+def deleteVowels(stringWithVowels : str):
+    """Удаляем все русские гласные буквы из строки"""
+    
+    stringNoneVowels_list, stringNoneVowels : str
+    
+    stringNoneVowels_list = [letter for letter in stringWithVowels
+                         if letter not in "аАоОуУыЫиИэЭяЯюЮеЕёЁ"
+                            ]
+    stringNoneVowels = "".join(stringNoneVowels_list)
+    
+    return stringNoneVowels
 
 
  
@@ -89,10 +110,10 @@ if __name__ == "__main__":
 
     #countDown()
     #print(sumArray([1,2,3,4]))
-    print(validatePIN(11111))
+    #print(validatePIN(11111))
     #print(isSqare(-9))
     #print(is_qwadre(4))
-    
+    print (deleteVowels("Это всё полная дрянь, и 1000 % хуйня"))
     
 
     
