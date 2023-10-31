@@ -7,6 +7,7 @@ import time
 
 def countDown(numOfStartCoundown: int):
     """Эта фуккция выводит обратный отсчет на экран."""
+
     print(numOfStartCoundown)
     if (numOfStartCoundown <= 1):
         return
@@ -15,6 +16,7 @@ def countDown(numOfStartCoundown: int):
 
 def sumArray(arr: list[int]):
     """Суммирует  числа в массиве"""
+
     total = 0
     for x in arr:
         total += x
@@ -23,6 +25,7 @@ def sumArray(arr: list[int]):
 def validatePIN_old(pin):
     """Проверяем PIN на соотвествие: Чтобыба был только из чисел,
       и равнялся 4 или 6 цифер"""
+    
     if pin.isdigit():
         lenghtPIN = len(pin)
         if  lenghtPIN == 4 or lenghtPIN == 6:
@@ -36,6 +39,7 @@ def validatePIN_old(pin):
 def validatePIN_old1(pin):
     """Проверяем PIN на соотвествие: Чтобыба был только из чисел,
       и был равен  4 или 6 разрядам"""
+    
     if isinstance(pin,str):  
         lenghtPIN = len(pin)
         if pin.isdigit() and (lenghtPIN == 4 or lenghtPIN == 6):
@@ -120,7 +124,7 @@ def sasite(text): #не мой код
 if __name__ == "__main__":
 
     #countDown()
-    #print(sumArray([1,2,3,4]))
+    #print(sumArray([1,2,3,4])) 3
     #print(validatePIN(11111))
     #print(isSqare(-9))
     #print(is_qwadre(4))
