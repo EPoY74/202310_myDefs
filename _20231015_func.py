@@ -1,5 +1,6 @@
 from typing import List
 from math import log10, sqrt, modf
+import time
 
 
 
@@ -95,7 +96,8 @@ def deleteVowels(stringWithVowels : str):
     """Удаляем все русские гласные буквы из строки"""
     
     stringNoneVowels_list : str
-    
+    stringNoneVowels : str
+
     
     stringNoneVowels_list = [letter for letter in stringWithVowels
                          if letter not in "аАоОуУыЫиИэЭяЯюЮеЕёЁ"
@@ -103,6 +105,14 @@ def deleteVowels(stringWithVowels : str):
     stringNoneVowels = "".join(stringNoneVowels_list)
     
     return stringNoneVowels
+
+def sasite(text): #не мой код
+    out = ""
+    letters = "аеёиоуыэюя"
+    for s in text:
+        if not s.lower() in letters:
+            out += s
+    return out
 
 
  
@@ -114,8 +124,11 @@ if __name__ == "__main__":
     #print(validatePIN(11111))
     #print(isSqare(-9))
     #print(is_qwadre(4))
-    print (deleteVowels("Это всё полная дрянь, и 1000 % хуйня"))
-    
+    start = time.time()
+    print (deleteVowels("ЭТоо всё полная дрянь, и 1000 % хуйня"))
+    end = time.time()
+    print("The time of execution of above program is :",
+      (end-start) * 10**3, "ms")
 
     
     
