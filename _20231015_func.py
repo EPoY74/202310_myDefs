@@ -94,7 +94,8 @@ def deleteVowels_old(stringWithVowels : str):
 def deleteVowels(stringWithVowels : str):
     """Удаляем все русские гласные буквы из строки"""
     
-    stringNoneVowels_list, stringNoneVowels : str
+    stringNoneVowels_list : str
+    
     
     stringNoneVowels_list = [letter for letter in stringWithVowels
                          if letter not in "аАоОуУыЫиИэЭяЯюЮеЕёЁ"
